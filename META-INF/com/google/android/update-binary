@@ -33,6 +33,9 @@ is_legacy_script() {
 
 set_permissions() {
     set_perm_recursive $MODPATH 0 0 0755 0644
+	set_perm_recursive $MODPATH/system/vendor/bin/cnss_diag 0 2000 0755 0755 u:object_r:wcnss_service_exec:s0
+	set_perm_recursive $MODPATH/system/vendor/bin/tcpdump 0 2000 0755 0755 u:object_r:wcnss_service_exec:s0
+    set_perm_recursive $MODPATH/system/vendor/etc/wifi/WCNSS_qcom_cfg.ini 0 2000 0755 0644 u:object_r:vendor_configs_file:s0
 }
 
 ##############
